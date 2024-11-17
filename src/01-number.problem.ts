@@ -2,9 +2,10 @@
 
 import { expect, it } from "vitest";
 import { z } from "zod";
-//       ^ 🕵️‍♂️
+const numberParser = z.number();
 
 export const toString = (num: unknown) => {
+  num = numberParser.parse(num)
   return String(num);
 };
 

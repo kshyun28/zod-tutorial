@@ -5,20 +5,21 @@ import { Equal, Expect } from "./helpers/type-utils";
  * 🕵️‍♂️ Refactor this code below to reduce the duplication,
  * while also making sure the cases don't go red!
  */
+const id = z.string().uuid()
 
 const User = z.object({
-  id: z.string().uuid(),
+  id: id,
   name: z.string(),
 });
 
 const Post = z.object({
-  id: z.string().uuid(),
+  id: id,
   title: z.string(),
   body: z.string(),
 });
 
 const Comment = z.object({
-  id: z.string().uuid(),
+  id: id,
   text: z.string(),
 });
 
